@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Добавить слово {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+        <main class="tm-main">
+            <form method="POST" id="words_input">
+                <input name="rus" placeholder="Russian" type="text" maxlength="30" minlength="2">
+                <input name="eng" placeholder="English" type="text" maxlength="30" minlength="2">
+                {% csrf_token %}
+                <button type="submit">добавить слово</button>
+            </form>
+        </main>
+</div>
+{% endblock %}

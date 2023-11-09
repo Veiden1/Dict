@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Список слов {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+        <main class="tm-main">
+
+ <table class="words_list" style="width:50%; border:5px solid black; padding: 10px">
+  <thead style="width:50%; border:5px solid black; padding: 10px">
+    <tr>
+      <th style="width:50%; border:5px solid black; padding: 10px">Russian</th>
+      <th style="width:50%; border:5px solid black; padding: 10px">English</th>
+    </tr>
+  </thead>
+           {% for pair in words %}
+  <tbody>
+    <tr>
+      <td style="width:50%; border:2px solid black; padding: 5px">{{pair|slice:":1" |join:""}}</td>
+      <td style="width:50%; border:2px solid black; padding: 5px">{{pair|slice:"1:2" |join:""}}</td>
+    </tr>
+  </tbody>
+          {% endfor %}
+</table>
+
+
+
+        </main>
+</div>
+{% endblock %}

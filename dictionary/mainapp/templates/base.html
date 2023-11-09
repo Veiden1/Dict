@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}  {% endblock %}</title>
+    {% load static %}
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/templatemo-xtra-blog.css' %}" rel="stylesheet">
+
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <h1 class="text-center">MyDictionary</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item active"><a href="/home" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        About
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/words_list" class="tm-nav-link">
+                        <i class="fas fa-pen"></i>
+                        Words
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/add_word" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        Add words
+                    </a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+{% block content %}
+
+{% endblock %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/templatemo-script.js' %}"></script>
+</body>
+</html>
